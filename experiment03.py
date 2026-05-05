@@ -25,7 +25,7 @@ if __name__ =='__main__':
     Tg = tw -tf # 过余温度， 管壁平均温度-空气平均温度
     h = P/(F*Tg)  #  平均换热系数
 
-    props = get_air_properties(tf)
+    props = get_air_properties((tw+tf)/2.0)
     p, nameda, v = props[0], props[1], props[2]  # p 空气的密度， nameda 1e2空气的导热系数， v 1e6空气的运动粘度
     Uce = math.sqrt(2*9.81*delt_h/p) # 测试段流速  米每秒
     Ushi = ((0.09*0.11)*Uce)/((0.19*0.29)-(math.pi*((D/2)**2)))  # 试验段流速 米每秒
