@@ -21,7 +21,7 @@ if __name__=='__main__':
     print("实验二 大容器内水沸腾换热实验")
     print("请以此输入单组的数据，沸腾水饱和温度，管内壁温度，管子ab间工作电压降， 管子ab间工作电流。如104.1, 104.6, 49.3, 20.4 但数字间的逗号用英文")
     input_data = input("请输入单组数据")
-    tf, t1, V, I = map(float, input_data.split(','))
+    ts, t1, V, I = map(float, input_data.split(','))
 
     fi = I*(V*1e-3)  # 管子放热量
 
